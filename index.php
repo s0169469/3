@@ -23,11 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 // Проверяем ошибки.
 $errors = FALSE;
 if (!preg_match( '/^([а-яё\s]+|[a-z\s]+)$/iu', $_POST['name'])){
-  print('Заполните имя.<br/>');
+  print('Запишите имя.<br/>');
   $errors = TRUE;
 }
 if (!preg_match('/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/', $_POST['email'])){
-  print('Заполните email.<br/>');
+  print('Запишите email.<br/>');
   $errors = TRUE;
 }
 if (empty($_POST['abilities'])) {
